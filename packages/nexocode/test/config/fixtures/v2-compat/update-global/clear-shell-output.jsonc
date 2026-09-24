@@ -1,0 +1,5 @@
+{
+  "$schema": "https://nexocode.ai/config.json",
+  "model": { "providerID": "example", "model": "demo" },
+  "snapshots": false,
+}

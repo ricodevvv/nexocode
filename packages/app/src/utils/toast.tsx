@@ -1,12 +1,12 @@
-import { Icon, type IconProps } from "@opencode-ai/ui/icon"
+import { Icon, type IconProps } from "@nexocode-ai/ui/icon"
 import {
   Toast,
   showToast as showLegacyToast,
   toaster as legacyToaster,
   type ToastOptions,
   type ToastVariant,
-} from "@opencode-ai/ui/toast"
-import { ToastV2, showToastV2, toasterV2 } from "@opencode-ai/ui/v2/toast-v2"
+} from "@nexocode-ai/ui/toast"
+import { ToastV2, showToastV2, toasterV2 } from "@nexocode-ai/ui/v2/toast-v2"
 
 let v2 = false
 

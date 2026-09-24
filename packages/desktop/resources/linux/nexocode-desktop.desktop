@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=NexoCode
+Exec=/opt/NexoCode/ai.nexocode.desktop %U
+Terminal=false
+Type=Application
+Icon=ai.nexocode.desktop
+StartupWMClass=ai.nexocode.desktop
+NoDisplay=true
+Comment=Open source AI coding agent
+Categories=Development;

@@ -42,7 +42,7 @@ export interface Interface {
   >
 }
 
-export class Service extends Context.Service<Service, Interface>()("@opencode/Image") {}
+export class Service extends Context.Service<Service, Interface>()("@nexocode/Image") {}
 
 const layer = Layer.effect(
   Service,

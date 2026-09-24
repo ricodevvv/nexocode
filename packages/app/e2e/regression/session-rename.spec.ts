@@ -1,10 +1,10 @@
 import { expect, test } from "@playwright/test"
 import { fixture, pageMessages } from "../smoke/session-timeline.fixture"
-import { mockOpenCodeServer } from "../utils/mock-server"
+import { mockNexoCodeServer } from "../utils/mock-server"
 
 test.beforeEach(async ({ page }) => {
   const sessions = fixture.sessions.map((session) => ({ ...session }))
-  await mockOpenCodeServer(page, {
+  await mockNexoCodeServer(page, {
     protocol: "v1",
     sessions,
     provider: fixture.provider,
@@ -30,7 +30,7 @@ test.beforeEach(async ({ page }) => {
   })
   await page.addInitScript((directory) => {
     localStorage.setItem(
-      "opencode.global.dat:server",
+      "nexocode.global.dat:server",
       JSON.stringify({
         projects: { local: [{ worktree: directory, expanded: true }] },
         lastProject: { local: directory },

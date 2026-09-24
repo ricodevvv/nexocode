@@ -1,20 +1,20 @@
-import type { DesktopMenuAction } from "@opencode-ai/app/desktop-menu"
-import type { WslServersPlatform } from "@opencode-ai/app/wsl/types"
-import type { UpdaterState } from "@opencode-ai/app/updater"
-import type { DesktopNativeBundle } from "@opencode-ai/app/i18n/desktop-native"
+import type { DesktopMenuAction } from "@nexocode-ai/app/desktop-menu"
+import type { WslServersPlatform } from "@nexocode-ai/app/wsl/types"
+import type { UpdaterState } from "@nexocode-ai/app/updater"
+import type { DesktopNativeBundle } from "@nexocode-ai/app/i18n/desktop-native"
 export type {
   WslDistroProbe,
   WslInstalledDistro,
   WslJob,
   WslOnlineDistro,
-  WslOpencodeCheck,
+  WslNexocodeCheck,
   WslRuntimeCheck,
   WslServerConfig,
   WslServerItem,
   WslServerRuntime,
   WslServersEvent,
   WslServersState,
-} from "@opencode-ai/app/wsl/types"
+} from "@nexocode-ai/app/wsl/types"
 
 export type ServerReadyData = {
   url: string

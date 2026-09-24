@@ -1,0 +1,4 @@
+{
+  "$schema": "https://nexocode.ai/config.json",
+  "model": "anthropic/claude-sonnet"
+}

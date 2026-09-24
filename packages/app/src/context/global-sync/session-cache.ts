@@ -1,6 +1,6 @@
-import type { Message, Part, PermissionRequest, QuestionRequest, SessionStatus, Todo } from "@opencode-ai/sdk/v2/client"
-import type { FileDiffInfo } from "@opencode-ai/client/promise"
-import type { SessionMessageInfo } from "@opencode-ai/client/promise"
+import type { Message, Part, PermissionRequest, QuestionRequest, SessionStatus, Todo } from "@nexocode-ai/sdk/v2/client"
+import type { FileDiffInfo } from "@nexocode-ai/client/promise"
+import type { SessionMessageInfo } from "@nexocode-ai/client/promise"
 
 export const SESSION_CACHE_LIMIT = 40
 

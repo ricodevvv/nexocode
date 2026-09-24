@@ -1,16 +1,16 @@
 export * from "./client.js"
 export * from "./server.js"
 
-import { createOpencodeClient } from "./client.js"
-import { createOpencodeServer } from "./server.js"
+import { createNexocodeClient } from "./client.js"
+import { createNexocodeServer } from "./server.js"
 import type { ServerOptions } from "./server.js"
 
-export async function createOpencode(options?: ServerOptions) {
-  const server = await createOpencodeServer({
+export async function createNexocode(options?: ServerOptions) {
+  const server = await createNexocodeServer({
     ...options,
   })
 
-  const client = createOpencodeClient({
+  const client = createNexocodeClient({
     baseUrl: server.url,
   })
 

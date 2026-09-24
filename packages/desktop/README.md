@@ -1,6 +1,6 @@
-# OpenCode Desktop
+# NexoCode Desktop
 
-The OpenCode Desktop app, built with Electron.
+The NexoCode Desktop app, built with Electron.
 
 ## Development
 
