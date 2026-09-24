@@ -2,9 +2,11 @@ import { RGBA } from "@opentui/core"
 import { createSignal, For, onCleanup, onMount } from "solid-js"
 import { useKV } from "../context/kv"
 
+export const AXO_PINK = RGBA.fromHex("#F0719E")
+
 const COLORS: Record<string, RGBA> = {
-  B: RGBA.fromHex("#F0719E"),
-  A: RGBA.fromHex("#F0719E"),
+  B: AXO_PINK,
+  A: AXO_PINK,
   S: RGBA.fromHex("#D4588A"),
   g: RGBA.fromHex("#B8336B"),
   p: RGBA.fromHex("#FFB3CD"),

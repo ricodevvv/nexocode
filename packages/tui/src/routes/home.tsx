@@ -1,7 +1,8 @@
 import { Prompt, type PromptRef } from "../component/prompt"
 import { createEffect, createMemo, createSignal, onMount } from "solid-js"
-import { Logo } from "../component/logo"
-import { Axo } from "../component/axo"
+import { Axo, AXO_PINK } from "../component/axo"
+import { useTheme } from "../context/theme"
+import { useTuiPaths } from "../context/runtime"
 import { useSync } from "../context/sync"
 import { Toast } from "../ui/toast"
 import { useArgs } from "../context/args"
@@ -31,6 +32,8 @@ export function Home() {
   const editor = useEditorContext()
   const dimensions = useTerminalDimensions()
   const tuiConfig = useTuiConfig()
+  const { theme } = useTheme()
+  const paths = useTuiPaths()
   const promptMaxWidth = createMemo(() => {
     const configured = tuiConfig.prompt?.max_width
     if (configured === "auto") return Math.max(75, Math.floor(dimensions().width * 0.7))
@@ -75,9 +78,31 @@ export function Home() {
         <box height={4} minHeight={0} flexShrink={1} />
         <box flexShrink={0}>
           <pluginRuntime.Slot name="home_logo" mode="replace">
-            <box flexDirection="row" gap={3} alignItems="center">
+            <box
+              width={promptMaxWidth()}
+              border
+              borderStyle="rounded"
+              borderColor={AXO_PINK}
+              paddingLeft={2}
+              paddingRight={2}
+              paddingTop={1}
+              paddingBottom={1}
+              flexDirection="row"
+              gap={3}
+            >
               <Axo mode="idle" />
-              <Logo />
+              <box justifyContent="center" flexShrink={1} minWidth={0}>
+                <text>
+                  <span style={{ fg: theme.text, bold: true }}>Welcome to </span>
+                  <span style={{ fg: AXO_PINK, bold: true }}>NexoCode</span>
+                  <span style={{ fg: theme.text, bold: true }}>!</span>
+                </text>
+                <text> </text>
+                <text fg={theme.textMuted}>/help for help · ctrl+p for commands</text>
+                <text fg={theme.textMuted} wrapMode="none">
+                  cwd: {paths.cwd}
+                </text>
+              </box>
             </box>
           </pluginRuntime.Slot>
         </box>
